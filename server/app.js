@@ -7,6 +7,10 @@ var mongoose = require('mongoose')
 
 var indexRouter = require('./routes/index');
 var dogsRouter = require('./routes/dogs');
+var reviewsRouter = require('./routes/reviews');
+var ratesRouter = require('./routes/rates');
+var visitsRouter = require('./routes/visits');
+
 
 var mongoDB = "mongodb+srv://Admin:DoggyPassword@cluster0-jcmsa.mongodb.net/test";
 mongoose.connect(mongoDB, { useNewUrlParser: true });
@@ -27,6 +31,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/dogs', dogsRouter);
+app.use('/rates', ratesRouter);
+app.use('/reviews', reviewsRouter);
+app.use('/visits', visitsRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
