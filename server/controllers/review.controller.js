@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Review = require('../models/review.model');
 
-module.exports.getreviews = async (req, res) => {
+module.exports.getReviews = async (req, res) => {
     try {
         const reviews = await Review.find();
 

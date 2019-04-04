@@ -3,10 +3,10 @@ var router = express.Router();
 const visitsController = require('../controllers/visit.controller')
 
 /* GET users listing. */
-router.get('/', visitsController.getDogs);
-router.post('/', visitsController.createDog);
-router.put('/', visitsController.updateDog);
-router.delete('/:visitId', visitsController.deleteDog);
+router.get('/', visitsController.getVisits);
+router.post('/', visitsController.createVisit);
+router.put('/', visitsController.updateVisit);
+router.delete('/:visitId', visitsController.deleteVisit);
 
 
 module.exports = router;
