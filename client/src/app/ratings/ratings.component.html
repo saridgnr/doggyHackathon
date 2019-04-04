@@ -1,0 +1,21 @@
+<table style="width:100%">
+    <tr>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+        <td class="title">Cute</td>
+        <td>
+          <img *ngIf="1 > categories.cute" src="assets/images/ratings/paw_outline.png">
+          <img *ngIf="categories.cute >= 1" src="assets/images/ratings/paw_fill.png">
+          <img *ngIf="2 > categories.cute" src="assets/images/ratings/paw_outline.png">
+          <img *ngIf="categories.cute >= 2" src="assets/images/ratings/paw_fill.png">
+          <img *ngIf="3 > categories.cute" src="assets/images/ratings/paw_outline.png">
+          <img *ngIf="categories.cute >= 3" src="assets/images/ratings/paw_fill.png">
+          <img *ngIf="4 > categories.cute" src="assets/images/ratings/paw_outline.png">
+          <img *ngIf="categories.cute >= 4" src="assets/images/ratings/paw_fill.png">
+          <img *ngIf="5 > categories.cute" src="assets/images/ratings/paw_outline.png">
+          <img *ngIf="categories.cute == 5" src="assets/images/ratings/paw_fill.png">
+        </td>
+    </tr>
+  </table>

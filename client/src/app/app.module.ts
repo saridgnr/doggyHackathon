@@ -13,6 +13,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { TabsComponent } from './tabs/tabs.component';
 import { MatCardModule } from '@angular/material/card';
 import {MatTabsModule} from '@angular/material/tabs';
+import { RatingsComponent } from './ratings/ratings.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     ProfileComponent,
     WinnersComponent,
     AlldogsComponent,
-    TabsComponent
+    TabsComponent,
+    RatingsComponent
   ],
   imports: [
     BrowserModule,
