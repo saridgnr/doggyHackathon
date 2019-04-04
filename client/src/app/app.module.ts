@@ -10,6 +10,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { WinnersComponent } from './winners/winners.component';
 import { AlldogsComponent } from './alldogs/alldogs.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { TabsComponent } from './tabs/tabs.component';
+import { MatCardModule } from '@angular/material/card';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MainComponent,
     ProfileComponent,
     WinnersComponent,
-    AlldogsComponent
+    AlldogsComponent,
+    TabsComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +31,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatCheckboxModule,
     MatToolbarModule,
     MatIconModule,
-    FlexLayoutModule 
+    FlexLayoutModule,
+    MatCardModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
