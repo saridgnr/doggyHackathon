@@ -8,7 +8,7 @@ var mongoose = require('mongoose')
 var indexRouter = require('./routes/index');
 var dogsRouter = require('./routes/dogs');
 
-var mongoDB = "mongodb+srv://Admin:DoggyPassword@doggyhackathon-jcmsa.mongodb.net/test";
+var mongoDB = "mongodb+srv://Admin:DoggyPassword@cluster0-jcmsa.mongodb.net/test";
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
