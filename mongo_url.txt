@@ -1,1 +1,0 @@
-mongo "mongodb+srv://doggyhackathon-jcmsa.mongodb.net/test" --username Admin
