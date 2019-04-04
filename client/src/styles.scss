@@ -1,7 +1,7 @@
 @import "~@angular/material/prebuilt-themes/purple-green.css";
 
-html, body, app-root {
+html, body, app-root, app-main {
     height: 100%;
     margin: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
 }
