@@ -78,5 +78,4 @@ export class WinnersComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

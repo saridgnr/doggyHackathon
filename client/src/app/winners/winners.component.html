@@ -1,12 +1,60 @@
 <div fxLayout="row" fxLayoutAlign="space-around center" fxFlex>
-    
+    <ul id="c" style="width: 100%;height: 200px;list-style-type: none;" fxLayout="row" fxLayoutAlign="center">
+        <li *ngFor="let topRated of topRatedDogs">
+            <!-- <img [src]="'data:image/png;base64, ' + topRated.dog.images[0]" class="rounded" /> -->
+            <img src="../../assets/images/crown.png" class="crown">
+            <div class="image-cropper" fxLayoutAlign="center" fxLayoutGap> 
+                <a routerLink="/profile/1"><img [src]="topRated.dog.images[0]" class="rounded" /></a>
+                <div class="category" fxLayoutAlign="center">
+                    <h3>{{topRated.category}}</h3>
+                </div>
+            </div>
+        </li>
+    </ul>
     <!-- <div *ngFor="let topRated of topRatedDogs" class="image-cropper" fxLayoutAlign="center" fxLayoutGap> -->
-    <div *ngFor="let topRated of topRatedDogs" class="image-cropper" fxLayoutAlign="center" fxLayoutGap>
+    <!-- <div *ngFor="let topRated of topRatedDogs" class="image-cropper" fxLayoutAlign="center" fxLayoutGap>
 
-        <!-- <img [src]="'data:image/png;base64, ' + topRated.dog.images[0]" class="rounded" /> -->
+        <img [src]="'data:image/png;base64, ' + topRated.dog.images[0]" class="rounded" />
         <a routerLink="/profile/1"><img [src]="topRated.dog.images[0]" class="rounded" /></a>
         <div class="category" fxLayoutAlign="center">
             <h3>1st {{topRated.category}}</h3>
         </div>
-    </div>    
+    </div>     -->
 </div>
+<script>
+
+var timer = 4000;
+
+var i = 0;
+var max = $('#c > li').length;
+ 
+	$("#c > li").eq(i).addClass('active').css('left','0');
+	$("#c > li").eq(i + 1).addClass('active').css('left','25%');
+	$("#c > li").eq(i + 2).addClass('active').css('left','50%');
+	$("#c > li").eq(i + 3).addClass('active').css('left','75%');
+ 
+
+	setInterval(function(){ 
+
+		$("#c > li").removeClass('active');
+
+		$("#c > li").eq(i).css('transition-delay','0.25s');
+		$("#c > li").eq(i + 1).css('transition-delay','0.5s');
+		$("#c > li").eq(i + 2).css('transition-delay','0.75s');
+		$("#c > li").eq(i + 3).css('transition-delay','1s');
+
+		if (i < max-4) {
+			i = i+4; 
+		}
+
+		else { 
+			i = 0; 
+		}  
+
+		$("#c > li").eq(i).css('left','0').addClass('active').css('transition-delay','1.25s');
+		$("#c > li").eq(i + 1).css('left','25%').addClass('active').css('transition-delay','1.5s');
+		$("#c > li").eq(i + 2).css('left','50%').addClass('active').css('transition-delay','1.75s');
+		$("#c > li").eq(i + 3).css('left','75%').addClass('active').css('transition-delay','2s');
+	
+	}, timer);
+</script>

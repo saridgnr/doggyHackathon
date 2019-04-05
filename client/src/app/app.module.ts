@@ -11,15 +11,19 @@ import { WinnersComponent } from './winners/winners.component';
 import { AlldogsComponent } from './alldogs/alldogs.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatGridListModule} from '@angular/material/grid-list';
-
 import { TabsComponent } from './tabs/tabs.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { RatingsComponent } from './ratings/ratings.component';
+import { GalleryComponent } from './gallery/gallery.component';
 import { TrophiesComponent } from './trophies/trophies.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DialogvisitComponent } from './dialogvisit/dialogvisit.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import { HttpClientModule }    from '@angular/common/http';
 import { DialogreviewComponent } from './dialogreview/dialogreview.component';
 
 @NgModule({
@@ -31,6 +35,7 @@ import { DialogreviewComponent } from './dialogreview/dialogreview.component';
     AlldogsComponent,
     TabsComponent,
     RatingsComponent,
+    GalleryComponent,
     TrophiesComponent,
     DialogvisitComponent,
     ReviewsComponent,
@@ -50,7 +55,12 @@ import { DialogreviewComponent } from './dialogreview/dialogreview.component';
     MatTabsModule,
     MatDialogModule,
     MatInputModule,
-    MatSliderModule
+    MatSliderModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatMomentDateModule,
+    HttpClientModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent],

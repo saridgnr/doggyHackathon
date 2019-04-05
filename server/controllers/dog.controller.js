@@ -67,9 +67,10 @@ module.exports.getDog = async (req, res) => {
 };
 
 module.exports.getTrophies = async (req, res) => {
+    const { dogId } = req.params;
     try {
         const ratings = await Rate.find();
-        let trophies = [];
+        let trophies = {};
         let dogsSum = {};
         let dogsCount = {};
         categories.forEach(function(cat) {
@@ -86,17 +87,18 @@ module.exports.getTrophies = async (req, res) => {
                 }
             });
             max = -1;
-            maxDogId = null;
-            for (let dogId in dogsSum) {
-                avg = dogsSum[dogId]/dogsCount[dogId]
+            maxDogIds = [];
+            for (let curDogId in dogsSum) {
+                avg = dogsSum[curDogId] / dogsCount[curDogId]
                 if (avg > max) {
                     max = avg;
-                    maxDogId = dogId;
+                    maxDogIds = [curDogId];
+                }
+                else if (avg == max) {
+                    maxDogIds.push(curDogId)
                 }
             }
-            if (maxDogId != null) {
-                trophies.push(cat);
-            }
+            trophies[cat] = (maxDogIds.indexOf(dogId) >= 0);
         });
 
         res.json(trophies)
