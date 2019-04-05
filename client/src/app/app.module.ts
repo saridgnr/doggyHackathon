@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MatButtonModule, MatCheckboxModule, MatIconModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatIconModule, MatInput, MatInputModule } from '@angular/material';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MainComponent } from './main/main.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -11,7 +11,6 @@ import { WinnersComponent } from './winners/winners.component';
 import { AlldogsComponent } from './alldogs/alldogs.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatGridListModule} from '@angular/material/grid-list';
-
 import { TabsComponent } from './tabs/tabs.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
@@ -21,6 +20,11 @@ import { TrophiesComponent } from './trophies/trophies.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DialogvisitComponent } from './dialogvisit/dialogvisit.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import { HttpClientModule }    from '@angular/common/http';
+import { DialogreviewComponent } from './dialogreview/dialogreview.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,8 @@ import { ReviewsComponent } from './reviews/reviews.component';
     GalleryComponent,
     TrophiesComponent,
     DialogvisitComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    DialogreviewComponent
   ],
   imports: [
     BrowserModule,
@@ -48,10 +53,15 @@ import { ReviewsComponent } from './reviews/reviews.component';
     MatCardModule,
     MatGridListModule,
     MatTabsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatMomentDateModule,
+    HttpClientModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [DialogvisitComponent]
+  entryComponents: [DialogvisitComponent, DialogreviewComponent]
 })
 export class AppModule { }

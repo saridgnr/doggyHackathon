@@ -1,9 +1,9 @@
 <div class="profile-div" fxLayout="column">
     <div class="header" fxFlex="20">
-        <img src="https://material.angular.io/assets/img/examples/shiba1.jpg" class="header-image"/>
+        <img [src]="dog.images[0]" class="header-image"/>
         <div class="header-details">
-          <div class="title">Shiba Inu</div>
-          <div class="owner">Dog Breed</div>
+          <div class="title">{{dog.name}}</div>
+          <div class="owner">{{dog.owner}}</div>
         </div>
     </div>
     <app-tabs fxFlex="80"></app-tabs>
