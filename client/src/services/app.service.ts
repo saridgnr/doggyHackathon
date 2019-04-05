@@ -35,4 +35,7 @@ export class Service {
         return this.http.get<any>(`${this.url}/reviews/dogs/${dogId}`);
     }
 
+    saveRate(rate): Observable<any>{
+        return this.http.post<any>(`${this.url}/rates/`, rate);
+    }
 }
