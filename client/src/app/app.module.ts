@@ -23,7 +23,7 @@ import { ReviewsComponent } from './reviews/reviews.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
-import { HttpClientModule }    from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { DialogreviewComponent } from './dialogreview/dialogreview.component';
 
 @NgModule({
