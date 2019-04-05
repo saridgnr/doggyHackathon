@@ -18,6 +18,10 @@ import { TrophiesComponent } from './trophies/trophies.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DialogvisitComponent } from './dialogvisit/dialogvisit.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import { HttpClientModule }    from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -43,7 +47,11 @@ import { ReviewsComponent } from './reviews/reviews.component';
     FlexLayoutModule,
     MatCardModule,
     MatTabsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatMomentDateModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
