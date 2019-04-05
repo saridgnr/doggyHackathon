@@ -55,8 +55,6 @@ module.exports.getReviewsByDogId = async (req, res) => {
     const { dogId } = req.params;
     try {
         const reviews = await Review.find({'dogID': dogId});
-
-        console.log(reviews);
         res.json(reviews);
 
     }
