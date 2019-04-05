@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Dog = require('../models/dog.model');
+const Rate = require('../models/rate.model');
 
 module.exports.getDogs = async (req, res) => {
     try {
@@ -43,6 +44,18 @@ module.exports.deleteDog = async (req, res) => {
     const { dogId } = req.params;
     try {
         const dog = await Dog.deleteOne({_id: dogId});
+
+        res.json(dog);
+    }
+    catch (err) {
+        console.log(err);
+    }
+};
+
+module.exports.getDog = async (req, res) => {
+    const { dogId } = req.params;
+    try {
+        const dog = await Dog.findOne({_id: dogId});
 
         res.json(dog);
     }

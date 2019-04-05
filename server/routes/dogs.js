@@ -7,6 +7,7 @@ router.get('/', dogsController.getDogs);
 router.post('/', dogsController.createDog);
 router.put('/', dogsController.updateDog);
 router.delete('/:dogId', dogsController.deleteDog);
+router.get('/:dogId', dogsController.getDog);
 
 
 module.exports = router;
