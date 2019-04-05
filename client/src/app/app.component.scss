@@ -9,3 +9,23 @@
   app-main {
     height: 100%;
 }
+
+mat-toolbar {
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+mat-icon:hover {
+  cursor: pointer;
+}
+
+::ng-deep {
+  .material-icons {
+    font-size: 35px;
+  }
+  .example-icon {
+    padding-bottom: 10px !important;
+  }
+}
