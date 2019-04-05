@@ -17,6 +17,7 @@ import { RatingsComponent } from './ratings/ratings.component';
 import { TrophiesComponent } from './trophies/trophies.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DialogvisitComponent } from './dialogvisit/dialogvisit.component';
+import { ReviewsComponent } from './reviews/reviews.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { DialogvisitComponent } from './dialogvisit/dialogvisit.component';
     TabsComponent,
     RatingsComponent,
     TrophiesComponent,
-    DialogvisitComponent
+    DialogvisitComponent,
+    ReviewsComponent
   ],
   imports: [
     BrowserModule,
