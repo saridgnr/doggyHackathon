@@ -1,5 +1,5 @@
 <div class="profile-div" fxLayout="column">
-    <div class="header" fxFlex="20">
+    <div class="header" fxFlex="20" *ngIf="dog">
         <img [src]="dog.images[0]" class="header-image"/>
         <div class="header-details">
           <div class="title">{{dog.name}}</div>

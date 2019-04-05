@@ -70,9 +70,10 @@ module.exports.getAvg = async (req, res) => {
             });
             if (count > 0) {
                 avg[cat] = sum / count;
+            } else {
+                avg[cat] = 0;
             }
         });
-
         res.json(avg);
 
     }
@@ -82,12 +83,17 @@ module.exports.getAvg = async (req, res) => {
 };
 
 module.exports.best = async (req, res) => {
+    console.log('hi');
     try {
         const ratings = await Rate.find();
+        console.log(ratings);
         let best = [];
         let dogsSum = {};
         let dogsCount = {};
-        categories.forEach(function(cat) {
+        for(let i = 0; i<categories.length; i++){
+            cat = categories[i];
+        
+
             dogsSum = new Proxy({}, {
                 get: (target, name) => name in target ? target[name] : 0.
             });
@@ -96,28 +102,35 @@ module.exports.best = async (req, res) => {
             });
             ratings.forEach(function (element) {
                 if (element[cat] != null) {
-                    dogsSum[element["dogID"]] += element[cat]
-                    dogsCount[element["dogID"]]++
+                    dogsSum[element["dogID"]] += element[cat];
+                    dogsCount[element["dogID"]]++;
                 }
             });
             max = -1;
             maxDogId = null;
             for (let dogId in dogsSum) {
-                avg = dogsSum[dogId]/dogsCount[dogId]
+                console.log('for');
+                avg = dogsSum[dogId]/dogsCount[dogId];
                 if (avg > max) {
+                    console.log("MAXXXX " + max + "AVG" + avg + " DOGID " + dogId);
                     max = avg;
                     maxDogId = dogId;
                 }
             }
             if (maxDogId != null) {
+                console.log("**************");
+                dog = await Dog.findById(maxDogId).lean();
+                console.log("+++++++++++++++++")
                 best.push({
                     "category": cat,
-                    "dog": maxDogId
+                    "dog": dog
                 })
+                console.log(dog);
             }
-        });
-
-        res.json(best)
+        }
+        console.log("end");
+        console.log(best);
+        res.json(best);
     }
     catch (err) {
         console.log(err);

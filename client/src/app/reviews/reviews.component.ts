@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { DialogreviewComponent } from '../dialogreview/dialogreview.component';
+import { Service } from 'src/services/app.service';
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-reviews',
@@ -10,26 +12,14 @@ import { DialogreviewComponent } from '../dialogreview/dialogreview.component';
 export class ReviewsComponent implements OnInit {
   allReviews = []
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, public service: Service, private route: ActivatedRoute) {}
 
   ngOnInit() {
 
-    this.allReviews = [{
-      "_id": "1232",
-      "dogID": "lalala",
-      "name": "Omer Sarid",
-      "comment": "This dog is very cute",
-      "date": "hey i am a timestamp",
-      "attachment": "some base64 crap"
-    },
-    {
-      "_id": "1232",
-      "dogID": "lalala",
-      "name": "Omer Sarid",
-      "comment": "This dog is not very cute",
-      "date": null,
-      "attachment": "some base64 crap"
-    }]
+    this.service.getReviewsByDog(this.route.snapshot.paramMap.get("id"))
+      .subscribe((data) => {
+        this.allReviews = data; 
+      });
   }
 
   openDialog(): void {

@@ -29,7 +29,7 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [],
+            "scripts": ["node_modules/hammerjs/hammer.js"],
             "es5BrowserSupport": true
           },
           "configurations": {
@@ -70,6 +70,7 @@
             }
           }
         },
+        
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
