@@ -1,0 +1,10 @@
+img{
+    width: 500px;
+}
+
+::ng-deep {
+    .cdk-overlay-pane{
+        width: 560px !important;
+        height: 370px !important;
+    }
+}
