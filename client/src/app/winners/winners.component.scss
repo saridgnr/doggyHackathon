@@ -1,0 +1,35 @@
+.image-cropper {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+}
+
+.rounded {
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+    z-index: -1;
+}
+
+.category{
+    overflow: hidden;
+    position: absolute;  
+    width: 200px;
+    bottom: 0;  
+}
+
+h3 {
+    left: 0; 
+    width: 100%;
+    color: white; 
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px; 
+    text-align: center;
+}
+
+a {
+    display: contents;
+}
