@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { Service } from 'src/services/app.service';
 import { ActivatedRoute } from '@angular/router';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
   selector: 'app-dialogreview',
@@ -19,14 +20,14 @@ export class DialogreviewComponent implements OnInit {
   comment:String
   name:String
 
-  constructor(private service:Service, private route: ActivatedRoute) { }
+  constructor(private service:Service, private route: ActivatedRoute, public dialogRef: MatDialogRef<DialogreviewComponent>, @Inject(MAT_DIALOG_DATA) public data) { }
 
   ngOnInit() {
   }
 
   submit(){
     this.service.saveRate({
-      dogID: this.route.snapshot.paramMap.get("id"),
+      dogID: this.data.id,
       cute: this.cute,
       annoying: this.annoying,
       friendly: this.friendly,
@@ -36,9 +37,10 @@ export class DialogreviewComponent implements OnInit {
       noisy: this.noisy,
       smelly: this.smelly
     }).subscribe((data)=>{console.log(data);
-      this.service.saveReview({name:this.name, comment: this.comment}).subscribe(
+      this.service.saveReview({name:this.name, comment: this.comment, dogID: this.data.id}).subscribe(
         (data)=>console.log(data)
       )
     });
+    this.dialogRef.close();
   }
 }

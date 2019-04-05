@@ -24,7 +24,8 @@ export class ReviewsComponent implements OnInit {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogreviewComponent, {
-      width: '500px'
+      width: '500px',
+      data: {id: this.route.snapshot.paramMap.get("id")}
     });
 
     dialogRef.afterClosed().subscribe(result => {

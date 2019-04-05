@@ -3,6 +3,7 @@
         <div *ngFor="let topRated of topRatedDogs">
             <img src="../../assets/images/crown.png" class="crown">
             <div class="image-cropper" fxLayoutAlign="center" fxLayoutGap> 
+				<img [src]="topRated.dog.images[0]" class="rounded" />
                 <div class="category" fxLayoutAlign="center">
                     <h3>{{topRated.category}}</h3>
                 </div>

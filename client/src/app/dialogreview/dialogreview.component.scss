@@ -3,3 +3,11 @@
     justify-content: center;
     flex-direction: column;
 }
+
+::ng-deep{
+    .cdk-overlay-pane{
+        overflow-y: auto !important;
+        height: 700px  !important;
+    }
+}
+    

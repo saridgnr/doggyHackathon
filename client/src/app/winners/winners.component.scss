@@ -1,6 +1,6 @@
 .image-cropper {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     overflow: hidden;
     border-radius: 50%;
     position: relative;
@@ -29,8 +29,9 @@ div.image-cropper {
 .crown{
     position: absolute;
     top: -3px;
-    margin-left: 96px;
-    width: 80px;
+    margin-left: 132px;
+    width: 88px;
+    z-index: 100;
 }
 
 .slider{
