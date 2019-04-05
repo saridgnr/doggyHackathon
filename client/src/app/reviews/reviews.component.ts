@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material';
+import { DialogreviewComponent } from '../dialogreview/dialogreview.component';
 
 @Component({
   selector: 'app-reviews',
@@ -8,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class ReviewsComponent implements OnInit {
   allReviews = []
 
-  constructor() { }
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit() {
 
@@ -30,4 +32,13 @@ export class ReviewsComponent implements OnInit {
     }]
   }
 
+  openDialog(): void {
+    const dialogRef = this.dialog.open(DialogreviewComponent, {
+      width: '500px'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
 }
