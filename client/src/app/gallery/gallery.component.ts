@@ -8,14 +8,13 @@ import { ActivatedRoute } from "@angular/router";
   styleUrls: ['./gallery.component.scss']
 })
 export class GalleryComponent implements OnInit {
-  tiles = [];
+  dogs = [];
   constructor(public service: Service, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.service.getDog(this.route.snapshot.paramMap.get("id"))
       .subscribe((data) => {
-        this.tiles = data.images; 
+        this.dogs = data.images; 
       });
   }
-
 }

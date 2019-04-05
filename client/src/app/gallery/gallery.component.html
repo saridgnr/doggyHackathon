@@ -1,8 +1,3 @@
-<mat-grid-list cols="4" rowHeight="100px">
-    <mat-grid-tile
-        *ngFor="let tile of tiles"
-        [colspan]="(tiles.length)%4"
-        [rowspan]="(tiles.length)%2"
-        [style.background]="tile">
-    </mat-grid-tile>
-  </mat-grid-list>
+<div *ngFor="let dog of dogs" class="image-cropper" fxLayoutAlign="center">
+    <img [src]="dog" class="rounded" />
+</div>

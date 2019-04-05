@@ -112,9 +112,10 @@ module.exports.best = async (req, res) => {
                 }
             }
             if (maxDogId != null) {
+                const dog = await Dog.findById(maxDogId).lean();
                 best.push({
                     "category": cat,
-                    "dog": maxDogId
+                    "dog": dog
                 })
             }
         });

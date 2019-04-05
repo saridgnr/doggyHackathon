@@ -25,7 +25,6 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { HttpClientModule }    from '@angular/common/http';
 import { DialogreviewComponent } from './dialogreview/dialogreview.component';
-import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -40,8 +39,7 @@ import { GalleryComponent } from './gallery/gallery.component';
     TrophiesComponent,
     DialogvisitComponent,
     ReviewsComponent,
-    DialogreviewComponent,
-    GalleryComponent
+    DialogreviewComponent
   ],
   imports: [
     BrowserModule,
