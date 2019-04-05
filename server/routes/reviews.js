@@ -7,6 +7,8 @@ router.get('/', reviewController.getReviews);
 router.post('/', reviewController.createReview);
 router.put('/', reviewController.updateReview);
 router.delete('/:reviewId', reviewController.deleteReview);
+router.get('/dogs/:dogId', reviewController.getReviewsByDogId);
+
 
 
 module.exports = router;

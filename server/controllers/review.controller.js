@@ -50,3 +50,17 @@ module.exports.deleteReview = async (req, res) => {
         console.log(err);
     }
 };
+
+module.exports.getReviewsByDogId = async (req, res) => {
+    const { dogId } = req.params;
+    try {
+        const reviews = await Review.find({'dogID': dogId});
+
+        console.log(reviews);
+        res.json(reviews);
+
+    }
+    catch (err) {
+        console.log(err);
+    }
+};
