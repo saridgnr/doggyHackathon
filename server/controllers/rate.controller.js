@@ -70,6 +70,8 @@ module.exports.getAvg = async (req, res) => {
             });
             if (count > 0) {
                 avg[cat] = sum / count;
+            } else {
+                avg[cat] = 0;
             }
         });
         console.log(avg);
