@@ -5,6 +5,7 @@
     border-radius: 50%;
     position: relative;
     cursor: pointer;
+    margin: 20px;
 }
 
 .rounded {
@@ -12,6 +13,24 @@
     height: 100%;
     width: auto;
     z-index: -1;
+}
+
+li.image-cropper {
+    position: relative;
+    top: 0;
+    opacity: 1;
+    transition: 1s opacity; 
+}
+
+.active {
+    opacity: 1;
+}
+
+.crown{
+    position: absolute;
+    top: -2px;
+    margin-left: 107px;
+    width: 80px;
 }
 
 .category{
@@ -34,3 +53,4 @@ h3 {
 a {
     display: contents;
 }
+

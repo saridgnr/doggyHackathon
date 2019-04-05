@@ -15,6 +15,7 @@ import { TabsComponent } from './tabs/tabs.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { RatingsComponent } from './ratings/ratings.component';
+import { GalleryComponent } from './gallery/gallery.component';
 import { TrophiesComponent } from './trophies/trophies.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DialogvisitComponent } from './dialogvisit/dialogvisit.component';
@@ -35,6 +36,7 @@ import { GalleryComponent } from './gallery/gallery.component';
     AlldogsComponent,
     TabsComponent,
     RatingsComponent,
+    GalleryComponent,
     TrophiesComponent,
     DialogvisitComponent,
     ReviewsComponent,
