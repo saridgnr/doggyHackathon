@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MatButtonModule, MatCheckboxModule, MatIconModule, MatInput, MatInputModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatIconModule, MatInput, MatInputModule, MatSliderModule } from '@angular/material';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MainComponent } from './main/main.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -49,7 +49,8 @@ import { DialogreviewComponent } from './dialogreview/dialogreview.component';
     MatGridListModule,
     MatTabsModule,
     MatDialogModule,
-    MatInputModule
+    MatInputModule,
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent],

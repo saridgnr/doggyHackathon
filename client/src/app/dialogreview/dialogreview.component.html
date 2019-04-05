@@ -6,5 +6,22 @@
   <mat-form-field>
     <textarea matInput placeholder="Text"></textarea>
   </mat-form-field>
-  <button mat-button>Send</button>
+  <br>
+  cute
+  <mat-slider min="1" max="5" step="1" (input)="cute = $event.value" [value]="cute"></mat-slider>
+  annoying
+  <mat-slider min="1" max="5" step="1" (input)="annoying = $event.value" [value]="annoying"></mat-slider>
+  friendly
+  <mat-slider min="1" max="5" step="1" (input)="friendly = $event.value" [value]="friendly"></mat-slider>
+  sleepy
+  <mat-slider min="1" max="5" step="1" (input)="sleepy = $event.value" [value]="sleepy"></mat-slider>
+  silly
+  <mat-slider min="1" max="5" step="1" (input)="silly = $event.value" [value]="silly"></mat-slider>
+  grumpy
+  <mat-slider min="1" max="5" step="1" (input)="grumpy = $event.value" [value]="grumpy"></mat-slider>
+  noisy
+  <mat-slider min="1" max="5" step="1" (input)="noisy = $event.value" [value]="noisy"></mat-slider>
+  smelly
+  <mat-slider min="1" max="5" step="1" (input)="smelly = $event.value" [value]="smelly"></mat-slider>
+  <button mat-button (click)="submit()">Send</button>
 </div>
