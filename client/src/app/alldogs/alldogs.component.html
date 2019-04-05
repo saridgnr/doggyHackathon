@@ -1,6 +1,5 @@
 <div class="dogs-menu" fxLayout="row wrap" fxLayoutAlign="space-around left">
 <div *ngFor="let dog of dogs" class="image-cropper" fxLayoutAlign="center">
-    <!-- <img [src]="'data:image/png;base64, ' + dog.images[0]" class="rounded" /> -->
-    <a routerLink="/profile/1"><img [src]="dog.images[0]" class="rounded" /></a>
+    <a routerLink="/profile/{{dog._id}}"><img [src]="dog.images[0]" class="rounded" /></a>
 </div>
 </div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Service } from 'src/services/app.service';
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-trophies',
@@ -7,10 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrophiesComponent implements OnInit {
 
-  public dogTrophies = { cute: true,annoying: false, sleepy: true,friendly: false,silly: true,grumpy: true,noisy: false,smelly: true };
-  constructor() { }
+  public dogTrophies = [];
+  constructor(public service: Service, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.service.getTrophiesByDog(this.route.snapshot.paramMap.get("id"))
+      .subscribe((data) => {
+        this.dogTrophies = data; 
+      });
   }
 
 }

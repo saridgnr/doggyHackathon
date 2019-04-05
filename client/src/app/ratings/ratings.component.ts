@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Service } from 'src/services/app.service';
+import { ActivatedRoute } from "@angular/router";
+
 
 @Component({
   selector: 'app-ratings',
@@ -6,13 +9,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ratings.component.scss']
 })
 export class RatingsComponent implements OnInit {
-  public categories;
-  constructor() { }
+  public categories = [];
+  constructor(public service: Service, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.categories = {
-      cute: 0,annoying: 0, sleepy: 2,friendly: 4,silly: 5,grumpy: 3,noisy: 1,smelly: 0
-    };
+    this.service.getRatesByDog(this.route.snapshot.paramMap.get("id"))
+      .subscribe((data) => {
+        this.categories = data; 
+      });
   }
 
 }

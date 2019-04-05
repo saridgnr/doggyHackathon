@@ -70,9 +70,11 @@ module.exports.getAvg = async (req, res) => {
             });
             if (count > 0) {
                 avg[cat] = sum / count;
+            } else {
+                avg[cat] = 0;
             }
         });
-
+        console.log(avg);
         res.json(avg);
 
     }
@@ -110,9 +112,10 @@ module.exports.best = async (req, res) => {
                 }
             }
             if (maxDogId != null) {
+                const dog = await Dog.findById(maxDogId).lean();
                 best.push({
                     "category": cat,
-                    "dog": maxDogId
+                    "dog": dog
                 })
             }
         });
