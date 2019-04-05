@@ -1,0 +1,34 @@
+.name{
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-right: .5em;
+}
+
+.date{
+    color: #ccc
+}
+
+ul
+{
+    list-style: none;
+}
+
+li
+{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1em;
+}
+
+img{
+    width: 30rem;
+    margin-bottom: 1em;
+}
+
+.new-button{
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    font-weight: bolder;
+    color: purple;
+    font-size: 24px;
+}
