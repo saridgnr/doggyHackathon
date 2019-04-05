@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Service } from 'src/services/app.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-dialogreview',
@@ -14,13 +16,29 @@ export class DialogreviewComponent implements OnInit {
   grumpy:Number
   noisy:Number
   smelly:Number
+  comment:String
+  name:String
 
-  constructor() { }
+  constructor(private service:Service, private route: ActivatedRoute) { }
 
   ngOnInit() {
   }
 
   submit(){
-    console.log(this.smelly)
+    this.service.saveRate({
+      dogID: this.route.snapshot.paramMap.get("id"),
+      cute: this.cute,
+      annoying: this.annoying,
+      friendly: this.friendly,
+      sleepy: this.sleepy,
+      silly:this.silly,
+      grumpy:this.grumpy,
+      noisy: this.noisy,
+      smelly: this.smelly
+    }).subscribe((data)=>{console.log(data);
+      this.service.saveReview({name:this.name, comment: this.comment}).subscribe(
+        (data)=>console.log(data)
+      )
+    });
   }
 }

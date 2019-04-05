@@ -14,11 +14,12 @@
     width: auto;
 }
 
-li.image-cropper {
+div.image-cropper {
     position: relative;
     top: 0;
     opacity: 1;
     transition: 1s opacity; 
+    cursor:pointer;
 }
 
 .active {
@@ -27,9 +28,24 @@ li.image-cropper {
 
 .crown{
     position: absolute;
-    top: -2px;
-    margin-left: 107px;
+    top: -3px;
+    margin-left: 96px;
     width: 80px;
+}
+
+.slider{
+    animation: moveslider 15s linear infinite;
+    position: absolute;
+    margin-left: 0;
+    top: 0;
+}
+
+@keyframes moveslider {
+    0% {margin-left: 0px;}
+    25% {margin-left:350px;}
+    50% {margin-left: 0px;}
+    75% {margin-left:-350px;}
+	100% {margin-left: 0px;}
 }
 
 .category{

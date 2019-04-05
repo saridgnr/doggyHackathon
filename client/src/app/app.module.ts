@@ -23,8 +23,9 @@ import { ReviewsComponent } from './reviews/reviews.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
-import { HttpClientModule }    from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { DialogreviewComponent } from './dialogreview/dialogreview.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { DialogreviewComponent } from './dialogreview/dialogreview.component';
     MatDatepickerModule,
     MatMomentDateModule,
     HttpClientModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

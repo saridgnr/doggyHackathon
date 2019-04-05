@@ -1,10 +1,10 @@
 <div class="center">
   <h2>Add a review</h2>
   <mat-form-field>
-    <input matInput placeholder="Name">
+    <input matInput placeholder="Name" [(ngModel)]="name">
   </mat-form-field>
   <mat-form-field>
-    <textarea matInput placeholder="Text"></textarea>
+    <textarea matInput placeholder="Text" [(ngModel)]="comment"></textarea>
   </mat-form-field>
   <br>
   cute
