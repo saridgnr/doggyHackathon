@@ -10,6 +10,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { WinnersComponent } from './winners/winners.component';
 import { AlldogsComponent } from './alldogs/alldogs.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 import { TabsComponent } from './tabs/tabs.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
@@ -44,6 +46,7 @@ import { DialogreviewComponent } from './dialogreview/dialogreview.component';
     MatIconModule,
     FlexLayoutModule,
     MatCardModule,
+    MatGridListModule,
     MatTabsModule,
     MatDialogModule,
     MatInputModule

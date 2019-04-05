@@ -1,3 +1,12 @@
-<p>
-  winners works!
-</p>
+<div fxLayout="row" fxLayoutAlign="space-around center" fxFlex>
+    
+    <!-- <div *ngFor="let topRated of topRatedDogs" class="image-cropper" fxLayoutAlign="center" fxLayoutGap> -->
+    <div *ngFor="let topRated of topRatedDogs" class="image-cropper" fxLayoutAlign="center" fxLayoutGap>
+
+        <!-- <img [src]="'data:image/png;base64, ' + topRated.dog.images[0]" class="rounded" /> -->
+        <a routerLink="/profile/1"><img [src]="topRated.dog.images[0]" class="rounded" /></a>
+        <div class="category" fxLayoutAlign="center">
+            <h3>1st {{topRated.category}}</h3>
+        </div>
+    </div>    
+</div>
