@@ -8,6 +8,8 @@ router.post('/', dogsController.createDog);
 router.put('/', dogsController.updateDog);
 router.delete('/:dogId', dogsController.deleteDog);
 router.get('/:dogId', dogsController.getDog);
+router.get('/:dogId/trophies', dogsController.getTrophies);
+
 
 
 module.exports = router;

@@ -10,7 +10,7 @@ router.delete('/:ratesId', ratesController.deleteRate);
 /*Get average for dog
 Example: http://localhost:3000/rates/avg/5ca65b815187ea12766dfbe7*/
 router.get('/avg/:dogId', ratesController.getAvg);
-
+router.get('/best', ratesController.best);
 
 
 module.exports = router;
