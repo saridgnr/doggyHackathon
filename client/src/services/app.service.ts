@@ -9,30 +9,30 @@ export class Service {
 
     constructor(private http: HttpClient) { }
 
-    url = 'localhost:3000';
+    url = 'http://localhost:3000';
 
-    getDogs(): Observable<any[]> {
-        return this.http.get<any[]>(`${this.url}/dogs`);
+    getDogs(): Observable<any> {
+        return this.http.get<any>(`${this.url}/dogs`);
     }
 
-    getDog(dogId): Observable<any[]> {
-        return this.http.get<any[]>(`${this.url}/dogs/${dogId}`);
+    getDog(dogId): Observable<any> {
+        return this.http.get<any>(`${this.url}/dogs/${dogId}`);
     }
 
-    getTrophiesByDog(dogId): Observable<any[]> {
-        return this.http.get<any[]>(`${this.url}/dogs/${dogId}/trophies`);
+    getTrophiesByDog(dogId): Observable<any> {
+        return this.http.get<any>(`${this.url}/dogs/${dogId}/trophies`);
     }
 
-    getRatesByDog(dogId): Observable<any[]> {
-        return this.http.get<any[]>(`${this.url}/rates/avg/${dogId}`);
+    getRatesByDog(dogId): Observable<any> {
+        return this.http.get<any>(`${this.url}/rates/avg/${dogId}`);
     }
 
-    getBestRates(): Observable<any[]> {
-        return this.http.get<any[]>(`${this.url}/rates/best`);
+    getBestRates(): Observable<any> {
+        return this.http.get<any>(`${this.url}/rates/best`);
     }
 
-    getReviewsByDog(dogId): Observable<any[]> {
-        return this.http.get<any[]>(`${this.url}/reviews/dogs/${dogId}`);
+    getReviewsByDog(dogId): Observable<any> {
+        return this.http.get<any>(`${this.url}/reviews/dogs/${dogId}`);
     }
 
 }

@@ -11,12 +11,10 @@ export class ProfileComponent implements OnInit {
   constructor(public service: Service, private route: ActivatedRoute) { }
   dog: any;
   ngOnInit() {
-    this.initDog();
-  }
-
-  initDog() {
-    this.service.getDog(this.route.snapshot.paramMap)
-      .subscribe((data) => this.dog = data);
+    this.service.getDog(this.route.snapshot.paramMap.get("id"))
+      .subscribe((data) => {
+        this.dog = data; 
+      });
   }
 
 }

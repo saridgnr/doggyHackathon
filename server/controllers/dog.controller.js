@@ -58,7 +58,6 @@ module.exports.getDog = async (req, res) => {
     const { dogId } = req.params;
     try {
         const dog = await Dog.findOne({_id: dogId});
-
         res.json(dog);
     }
     catch (err) {

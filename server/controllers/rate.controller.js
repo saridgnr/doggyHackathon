@@ -72,7 +72,7 @@ module.exports.getAvg = async (req, res) => {
                 avg[cat] = sum / count;
             }
         });
-
+        console.log(avg);
         res.json(avg);
 
     }

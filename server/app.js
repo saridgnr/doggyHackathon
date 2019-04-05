@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose')
-
+var cors = require('cors');
 var indexRouter = require('./routes/index');
 var dogsRouter = require('./routes/dogs');
 var reviewsRouter = require('./routes/reviews');
@@ -18,6 +18,8 @@ var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 var app = express();
+
+app.use(cors());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
