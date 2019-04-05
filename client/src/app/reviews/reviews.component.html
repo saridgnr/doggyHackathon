@@ -1,0 +1,13 @@
+<ul>
+  <li *ngFor="let review of allReviews">
+    <div class="title">
+      <span class="name">{{review.name}}</span>
+      <span class="date">{{review.date}}</span>
+    </div>
+    <p>{{review.comment}}</p>
+    <img [src]="'http://discountdogpoopbags.com/wp-content/uploads/2016/06/dog-clean-up-poop.jpg'" alt="">
+  </li>
+</ul>
+<button class="new-button" mat-fab>
+  +
+</button>
