@@ -14,6 +14,7 @@ import { TabsComponent } from './tabs/tabs.component';
 import { MatCardModule } from '@angular/material/card';
 import {MatTabsModule} from '@angular/material/tabs';
 import { RatingsComponent } from './ratings/ratings.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { RatingsComponent } from './ratings/ratings.component';
     WinnersComponent,
     AlldogsComponent,
     TabsComponent,
-    RatingsComponent
+    RatingsComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
